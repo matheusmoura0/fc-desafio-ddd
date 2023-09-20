@@ -13,6 +13,14 @@ export default class Order {
     this.validate();
   }
 
+  changeCustomer(customerId: string): void {
+    this._customerId = customerId;
+  }
+
+  addItem(item: OrderItem): void {
+    this._items.push(item);
+  }
+
   get id(): string {
     return this._id;
   }
@@ -23,6 +31,10 @@ export default class Order {
 
   get items(): OrderItem[] {
     return this._items;
+  }
+
+  set items(items: OrderItem[]) {
+    this._items = items;
   }
 
   validate(): boolean {
