@@ -11,7 +11,6 @@ import ProductRepository from "../../../product/repository/sequelize/product.rep
 import OrderItemModel from "./order-item.model";
 import OrderModel from "./order.model";
 import OrderRepository from "./order.repository";
-import { or } from "sequelize";
 
 describe("Order repository test", () => {
   let sequelize: Sequelize;
